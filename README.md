@@ -1,0 +1,2 @@
+1. 注册hook，保存当前env，以备下次恢复，在命令执行的前后都要调用hook的回调函数
+2. hook函数中检查当前目录是否有.envrc文件，如果有加载，如果没有或离开要还原。场景：cd ~，切到home目录下后触发hook函数，发现有.envrc，加载它；cd ~/code，切到code目录，发现没有了.envrc，需要还原；cd ~/Downloads，切到downloads下，发现没有，并且上一次也没有加载过.envrc就不做处理
