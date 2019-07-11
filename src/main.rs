@@ -47,7 +47,7 @@ fn build_cmd(){
         register_hook(hook.to_string());
     }
 
-    if let Some(exports) = matches.value_of("exports") {
+    if let Some(_exports) = matches.value_of("exports") {
         if check_envrc_file() == true {
             load_rc();
         }
